@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Test Website</title>
+    <title>Website Praktikum</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #0078D4, #00B4FF);
+            background: linear-gradient(135deg, #1f1c2c, #928dab); /* Warna tema baru */
             color: white;
             text-align: center;
-            padding-top: 100px;
+            padding-top: 80px;
         }
         .card {
             background: rgba(255,255,255,0.1);
@@ -23,34 +23,59 @@
             margin-bottom: 10px;
         }
         p {
-            font-size: 18px;
+            font-size: 16px;
         }
         .btn {
-            margin-top: 20px;
+            margin: 10px 5px;
             padding: 10px 20px;
             border: none;
             border-radius: 8px;
             background: white;
-            color: #0078D4;
+            color: #1f1c2c;
             cursor: pointer;
             font-weight: bold;
         }
         .btn:hover {
             background: #f0f0f0;
         }
+        .btn-secondary {
+            margin: 10px 5px;
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-radius: 8px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
     </style>
 </head>
 <body>
+
     <div class="card">
-        <h1>🚀 Azure Web Test</h1>
-        <p>Website ini berhasil berjalan di Microsoft Azure!</p>
+        <h1>🚀 Website Praktikum Cloud Computing</h1>
+        <p>Website ini telah diperbarui menggunakan Continuous Deployment!</p>
+        <hr style="border: 0.5px solid rgba(255,255,255,0.3); margin: 15px 0;">
+        
+        <!-- Data Diri Mahasiswa -->
+        <p><b>Nama  :</b> Rendy Putra Setiawan</p>
+        <p><b>NIM   :</b> 102042400016</p>
+        <p><b>Kelas :</b> S1-SIKJ-24-05</p>
+        
         <p id="time"></p>
-        <button class="btn" onclick="showMessage()">Klik Saya</button>
+
+        <!-- KODE TOMBOL DITARUH DI SINI -->
+        <button class="btn" onclick="showMessage()">Cek Status Update</button>
+        <a href="https://github.com" target="_blank"><button class="btn-secondary">Lihat GitHub</button></a>
     </div>
 
+    <!-- KODE SCRIPT DITARUH DI BAGIAN BAWAH INI -->
     <script>
         function showMessage() {
-            alert("Halo! Website kamu sudah berhasil berjalan di Azure 🎉");
+            alert("Status: Pembaruan kode berhasil diterapkan secara otomatis di Vercel!");
         }
 
         function updateTime() {
